@@ -32,22 +32,189 @@
     
     <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
         <div class="offcanvas-header">
-          <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
+          <h5 class="offcanvas-title" id="offcanvasExampleLabel">Transact</h5>
           <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
 
          <div class="offcanvas-body">
-          Transaction
+            <small class="card-text">
+              Choose the below option perform transaction
+            </small>
+            <select name="transact-type" class="form-control" id="transact_type">
+              <option value="">-- Select Transaction Type --</option>
+              <option value="payment">Payment</option>
+              <option value="transfer">Transfer</option>
+              <option value="deposit">Deposit</option>
+              <option value="withdraw">Withdraw</option>
+            </select>
+
+            <div class="card payment-card">
+              <div class="card-body">
+
+                <form action="" class="payment-form">
+
+                  <div class="form-group mb-2">
+                    <label for="">Account Holder</label>
+                    <input type="text" class="form-control" name="beneficiary" placeholder="Enter Account holder name">
+                  </div>
+  
+                  <div class="form-group mb-2">
+                    <label for="">Account Holder Number</label>
+                    <input type="text" class="form-control" name="acount_number" placeholder="Enter Account holder number">
+                  </div>
+  
+                  <div class="form-group">
+                    <label for="">Select Account</label>
+                    <select name="account_id" class="form-control" id="">
+                      <option value="">-- Select Account --</option>
+                    </select>
+                  </div>
+                  
+                  <div class="form-group mb-2">
+                    <label for="">Reference</label>
+                    <input type="text" class="form-control" name="reference" placeholder="Enter Reference">
+                  </div>
+  
+                  <div class="form-group mb-2">
+                    <label for="">Enter Payment Amount</label>
+                    <input type="text" class="form-control" name="payment_amount" placeholder="Enter Account holder number">
+                  </div>
+  
+                  <div class="form-group mb-2">
+                    <button id="transact" class="btn btn-md">Pay</button>
+                  </div>
+
+                </form>
+                
+              </div>
+            </div>
+
+            <div class="card transfer-card">
+              <div class="card-body">
+
+                <form action="" class="transfer-form">
+
+                  <div class="form-group">
+                    <label for="">Select Account</label>
+                    <select name="account_id" class="form-control" id="">
+                      <option value="">-- Select Account --</option>
+                    </select>
+                  </div>
+  
+                  <div class="form-group mb-2">
+                    <label for="">Account Holder</label>
+                    <input type="text" class="form-control" name="beneficiary" placeholder="Enter Account holder name">
+                  </div>
+  
+                  <div class="form-group mb-2">
+                    <label for="">Account Holder Number</label>
+                    <input type="text" class="form-control" name="acount_number" placeholder="Enter Account holder number">
+                  </div>
+  
+                  <div class="form-group mb-2">
+                    <label for="">Enter Transfer Amount</label>
+                    <input type="text" class="form-control" name="payment_amount" placeholder="Enter Account holder number">
+                  </div>
+  
+                  <div class="form-group mb-2">
+                    <button id="transact" class="btn btn-md">Transfer</button>
+                  </div>
+
+                </form>
+
+              </div>
+            </div>
+
+           <div class="card deposit-card">
+              <div class="card-body">
+
+                <form action="" class="deposit-form">
+
+                  <div class="form-group mb-2">
+                    <label for="">Enter Deposit Amount</label>
+                    <input type="text" class="form-control" name="deposit_amount" placeholder="Enter deposit amount">
+                  </div>
+  
+                  
+                  <div class="form-group">
+                    <label for="">Select Account</label>
+                    <select name="account_id" class="form-control mb-3" id="">
+                      <option value="">-- Select Account --</option>
+                    </select>
+                  </div>
+  
+                  <div class="form-group mb-2">
+                    <button id="transact" class="btn btn-md">Deposit</button>
+                  </div>
+
+                </form>
+                
+              </div>
+            </div>
+
+            <div class="card withdraw-card">
+              <div class="card-body">
+
+                <form action="" class="withdraw-form">
+
+                  <div class="form-group mb-2">
+                    <label for="">Enter withdraw Amount</label>
+                    <input type="text" class="form-control" name="withdraw_amount" placeholder="Enter Withdraw Amount">
+                  </div>
+  
+                  
+                  <div class="form-group">
+                    <label for="">Select Account</label>
+                    <select name="account_id" class="form-control mb-3" id="">
+                      <option value="">-- Select Account --</option>
+                    </select>
+                  </div>
+  
+                  <div class="form-group mb-2">
+                    <button id="transact" class="btn btn-md">Deposit</button>
+                  </div>
+
+                </form>
+                
+              </div>
+            </div>
+
         </div>
     </div>
 
     <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
         <div class="offcanvas-header">
-          <h5 id="offcanvasRightLabel">Offcanvas Right</h5>
+          <h5 id="offcanvasRightLabel">Create / Add an account</h5>
           <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body">
-            Accounts form
+            <div class="card">
+              <div class="card-body">
+
+                <form action="" class="add-account-form">
+                  <div class="form-group">
+                    <label for="">Enter Account Name</label>
+                    <input type="text" name="account_name" class="form-control" placeholder="Enter Account Name">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="">Select Account Type</label>
+                    <select name="account-type" class="form-control my-3" id="account_type">
+                      <option value="">-- Select Account Type --</option>
+                      <option value="payment">check</option>
+                      <option value="transfer">Savings</option>
+                      <option value="deposit">Bussiness</option>
+                    </select>
+                  </div>
+
+                  <div class="form-group">
+                    <button id="add-account" class="btn btn-md">Add Account</button>
+                  </div>
+
+                </form>
+              </div>
+              
+            </div>
         </div>
       </div>
 
@@ -56,10 +223,16 @@
         <button  id="account-btn" class="btn btn-md" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasExample">
            <i class="fas fa-user"></i> Add New Account
         </button>
+
         <button  id="transact-btn" class="btn btn-md ms-auto" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
             <i class="fas fa-wallet"></i> Transact
         </button>
           
+    </div>
+
+    <div class="container d-flex py-3">
+      <h2 class="">Total Accounts Balance:</h2>
+      <h2 class="ms-auto">0.00</h2>
     </div>
 
     <div class="container">
@@ -94,10 +267,28 @@
                 <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
               </div>
             </div>
+          </div>    
+    </div>
+
+    <div class="container">
+      <div class="card no-accounts-card">
+        <div class="card-body">
+          <h1 class="card-title">
+              <i class="fas fa-ban text-danger"></i>No Registered Account
+          </h1>
+          <div class="card-text py-3">
+            You currently do not have any registered accounts <br>
+            Please click below to register / add new acoount
           </div>
-        
+          
+          <button class="btn btn-md bg-primary text-white" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasExample">
+           <i class="fas fa-user"></i> Add New Account
+        </button>
+        </div>
+      </div>
     </div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="js/main.js"></script>
 </body>
 </html>

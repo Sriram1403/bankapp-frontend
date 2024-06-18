@@ -46,3 +46,31 @@ body{
     border: 1px solid  brown;
     color: white;
 }
+
+#transact{
+    background-color: #ff4e00;
+    border: 1px solid  brown;
+}
+
+#add-account
+{
+    background-color: #ffb114;
+    border: 1px solid  brown;
+    color: white;
+}
+
+.payment-card{
+    display: none;
+}
+
+.transfer-card{
+    display: none;
+}
+
+.deposit-card{
+    display: none;
+}
+
+.withdraw-card{
+    display: none;
+}
